@@ -2,7 +2,7 @@
 
 [![bling-hashes](http://img.shields.io/npm/v/bling-hashes.svg)](https://www.npmjs.org/package/bling-hashes)
 [![bling-hashes](http://img.shields.io/npm/dm/bling-hashes.svg)](https://www.npmjs.org/package/bling-hashes)
-[![Build Status](https://travis-ci.org/XadillaX/bling_hashes.svg?branch=develop)](https://travis-ci.org/XadillaX/bling_hashes)
+[![Build Status](https://travis-ci.org/XadillaX/bling_hashes.svg?branch=master)](https://travis-ci.org/XadillaX/bling_hashes)
 [![Coverage Status](https://img.shields.io/coveralls/XadillaX/bling_hashes/master.svg)](https://coveralls.io/r/XadillaX/bling_hashes?branch=master)
 [![License](https://img.shields.io/npm/l/bling-hashes.svg?style=flat)](https://www.npmjs.org/package/bling-hashes)
 [![Dependency Status](https://david-dm.org/XadillaX/bling_hashes.svg)](https://david-dm.org/XadillaX/bling_hashes)
