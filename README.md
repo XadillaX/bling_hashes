@@ -2,12 +2,12 @@
 
 [![bling-hashes](http://img.shields.io/npm/v/bling-hashes.svg)](https://www.npmjs.org/package/bling-hashes)
 [![bling-hashes](http://img.shields.io/npm/dm/bling-hashes.svg)](https://www.npmjs.org/package/bling-hashes)
-[![Build Status](https://travis-ci.org/XadillaX/bling-hashes.svg?branch=develop)](https://travis-ci.org/XadillaX/bling-hashes)
-[![Coverage Status](https://img.shields.io/coveralls/XadillaX/bling-hashes/master.svg)](https://coveralls.io/r/XadillaX/bling-hashes?branch=master)
+[![Build Status](https://travis-ci.org/XadillaX/bling_hashes.svg?branch=develop)](https://travis-ci.org/XadillaX/bling_hashes)
+[![Coverage Status](https://img.shields.io/coveralls/XadillaX/bling_hashes/master.svg)](https://coveralls.io/r/XadillaX/bling_hashes?branch=master)
 [![License](https://img.shields.io/npm/l/bling-hashes.svg?style=flat)](https://www.npmjs.org/package/bling-hashes)
-[![Dependency Status](https://david-dm.org/XadillaX/bling-hashes.svg)](https://david-dm.org/XadillaX/bling-hashes)
+[![Dependency Status](https://david-dm.org/XadillaX/bling_hashes.svg)](https://david-dm.org/XadillaX/bling_hashes)
 
-[![Star at GitHub](https://img.shields.io/github/stars/XadillaX/bling-hashes.svg?style=social&label=Star)](https://github.com/xadillax/bling-hashes)
+[![Star at GitHub](https://img.shields.io/github/stars/XadillaX/bling_hashes.svg?style=social&label=Star)](https://github.com/xadillax/bling_hashes)
 
 String hash algorithms for node.js.
 
