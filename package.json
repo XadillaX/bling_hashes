@@ -24,6 +24,8 @@
     "nan": "^2.0.9"
   },
   "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.3.19",
     "mocha": "^2.3.2",
     "should": "^7.1.0"
   }

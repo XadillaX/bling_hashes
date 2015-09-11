@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "0.10"
+  - "0.11"
+  - "0.12"
+  - "iojs-v1.0.3"
+  - "iojs-v2.5.0"
+  - "iojs-v3.0.0"
+  - "iojs-v4.0.0"
+install:
+  - export CXX="g++-4.8" CXX="gcc-4.8"
+  - $CXX --version
+  - npm install -g istanbul
+  - npm install
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-4.8
+      - g++-4.8
+      - clang
+after_script: istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage 
