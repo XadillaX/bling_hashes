@@ -22,5 +22,9 @@
   "homepage": "https://github.com/XadillaX/bling_hashes#readme",
   "dependencies": {
     "nan": "^2.0.9"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.2",
+    "should": "^7.1.0"
   }
 }
