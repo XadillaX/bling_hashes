@@ -4,7 +4,7 @@
   "description": "String hash algorithms.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/_mocha"
   },
   "repository": {
     "type": "git",
