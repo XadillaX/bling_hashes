@@ -16,7 +16,7 @@
  * =====================================================================================
  */
 #include <nan.h>
-#include "algorithms.h"
+#include "byvoid_algorithms.h"
 #include <string.h>
 
 using Nan::Set;

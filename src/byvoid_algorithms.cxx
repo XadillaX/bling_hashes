@@ -15,7 +15,7 @@
  *
  * =====================================================================================
  */
-#include "algorithms.h"
+#include "byvoid_algorithms.h"
 
 /**
  * This file is refer to https://www.byvoid.com/blog/string-hash-compare/

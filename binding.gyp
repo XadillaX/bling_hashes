@@ -3,7 +3,7 @@
     {
       "target_name": "bling",
       "sources": [
-        "./src/algorithms.cxx",
+        "./src/byvoid_algorithms.cxx",
         "./src/bling.cxx"
       ],
       "include_dirs": [
