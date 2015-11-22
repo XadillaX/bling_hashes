@@ -27,6 +27,6 @@ unsigned int BKDRHash(char *str);
 unsigned int DJBHash(char *str);
 unsigned int APHash(char *str);
 
-typedef unsigned int (*HashFunc)(char*);
+typedef unsigned int (*ByvoidHashFunc)(char*);
 
 #endif

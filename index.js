@@ -77,3 +77,7 @@ exports.pjw = function(str) {
 exports.elf = function(str) {
     return bling.calcHash("ELF", str);
 };
+
+exports.city32 = function(str) {
+    return bling.cityHash32(str);
+};

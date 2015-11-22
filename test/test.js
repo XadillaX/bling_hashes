@@ -9,7 +9,7 @@ var bling = require("../");
 
 describe("hash algorithm tests", function() {
     var words = [];
-    var algorithms = [ "BKDR", "AP", "DJB", "JS", "RS", "SDBM", "PJW", "ELF" ];
+    var algorithms = [ "BKDR", "AP", "DJB", "JS", "RS", "SDBM", "PJW", "ELF", "CITY32" ];
 
     before(function() {
         var fs = require("fs");
@@ -34,11 +34,14 @@ describe("hash algorithm tests", function() {
                 res.push(bling[name](words[i]));
             }
 
-            // var fs = require("fs");
-            // fs.writeFileSync(__dirname + "/resources/" + name + ".txt", res.join("\n"), {
-            //     encoding: "utf8"
-            // });
-            
+            // if(name === "city32") {
+            //     var fs = require("fs");
+            //     fs.writeFileSync(__dirname + "/resources/" + name + ".txt", res.join("\n"), {
+            //         encoding: "utf8"
+            //     });
+            //     return;
+            // }
+
             var fs = require("fs");
             var std = fs.readFileSync(__dirname + "/resources/" + name + ".txt", {
                 encoding: "utf8"
