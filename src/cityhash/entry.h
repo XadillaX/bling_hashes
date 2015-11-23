@@ -41,7 +41,13 @@ NAN_METHOD(_CityHash32)
     unsigned int len = source_string.size();
 
     unsigned int hash = CityHash32(source_string.c_str(), len);
+
+#if NODE_MAJOR_VERSION == 0 && \
+    NODE_MINOR_VERSION <= 10
+    info.GetReturnValue().Set((double)hash);
+#else
     info.GetReturnValue().Set(hash);
+#endif
 }
 
 NAN_METHOD(_CityHash64)
