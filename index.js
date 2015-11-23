@@ -5,6 +5,7 @@
  * reserved.
  */
 var bling = require("./build/Release/bling");
+var Long = require("long");
 
 /**
  * bkdr
@@ -80,4 +81,10 @@ exports.elf = function(str) {
 
 exports.city32 = function(str) {
     return bling.cityHash32(str);
+};
+
+exports.city64 = function(str) {
+    var _int64 = bling.cityHash64(str);
+    _int64 = new Long(_int64.readInt32LE(0), _int64.readInt32LE(4), true);
+    return _int64;
 };

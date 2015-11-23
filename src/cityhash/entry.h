@@ -22,6 +22,12 @@
 #include <string>
 #include "cityhash.h"
 
+void __CityHash64FreeCallback(char* data, void* hint)
+{
+    unsigned long long* hash = (unsigned long long*)data;
+    delete hash;
+}
+
 NAN_METHOD(_CityHash32)
 {
     // argument length...
@@ -36,6 +42,28 @@ NAN_METHOD(_CityHash32)
 
     unsigned int hash = CityHash32(source_string.c_str(), len);
     info.GetReturnValue().Set(hash);
+}
+
+NAN_METHOD(_CityHash64)
+{
+    // argument length...
+    if(info.Length() < 1)
+    {
+        return Nan::ThrowError("invalid argument count");
+    }
+
+    String::Utf8Value v8_source_string(info[0]->ToString());
+    std::string source_string = *v8_source_string;
+    unsigned int len = source_string.size();
+
+    unsigned long long* hash = new unsigned long long(CityHash64(source_string.c_str(), len));
+    // printf("    %llu\n", *hash);
+    info.GetReturnValue().Set(
+            Nan::NewBuffer(
+                (char*)hash,
+                sizeof(unsigned long long),
+                __CityHash64FreeCallback,
+                NULL).ToLocalChecked());
 }
 
 #endif

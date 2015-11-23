@@ -35,6 +35,8 @@ NAN_MODULE_INIT(InitAll)
     // City hashes
     Set(target, New<String>("cityHash32").ToLocalChecked(),
             GetFunction(New<FunctionTemplate>(_CityHash32)).ToLocalChecked());
+    Set(target, New<String>("cityHash64").ToLocalChecked(),
+            GetFunction(New<FunctionTemplate>(_CityHash64)).ToLocalChecked());
 }
 
 NODE_MODULE(bling, InitAll)
