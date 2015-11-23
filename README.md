@@ -29,6 +29,9 @@ There are 8 algorithms so far.
   * [SDBMHash](http://www.partow.net/programming/hashfunctions/#SDBMHashFunction)
   * [PJWHash](http://www.partow.net/programming/hashfunctions/#PJWHashFunction)
   * [ELFHash](http://www.partow.net/programming/hashfunctions/#ELFHashFunction)
+  * [CityHash](https://github.com/google/cityhash)
+    - [CityHash32](https://github.com/google/cityhash/blob/master/src/city.cc#L189): returns a 32-bit hash.
+    - [CityHash64](https://https://github.com/google/cityhash/blob/master/src/city.cc#L366): and similar return a 64-bit hash.
 
 The benchmark, performance and implementation can be referenced [here (各种字符串Hash函数比较)](https://www.byvoid.com/blog/string-hash-compare/).
 
