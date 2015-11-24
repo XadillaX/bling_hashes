@@ -1,6 +1,6 @@
 {
   "name": "bling-hashes",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "String hash algorithms.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,11 @@
   },
   "keywords": [
     "hash",
-    "string hash"
+    "string hash",
+    "elfen hash",
+    "cityhash",
+    "bkdr hash",
+    "city hash"
   ],
   "author": "XadillaX <i@2333.moe>",
   "license": "MIT",
