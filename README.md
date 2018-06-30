@@ -66,7 +66,7 @@ var hash2 = bling.city32("玉扣"); ///< 887335438
 
 ## Contribution
 
-Thanks to [ByVoid](https://github.com/byvoid). The C++ implementation code was copied from his blog.
+Thanks to [BYVoid](https://github.com/byvoid). The C++ implementation code was copied from his blog.
 
 You're welcome to make pull requests.
 
