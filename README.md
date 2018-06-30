@@ -62,6 +62,7 @@ var hash2 = bling.city32("玉扣"); ///< 887335438
     - `.toString()`: The string value of the 128-bit number;
     - `.toLongArray()`: An array that includes two 64-bit `Long` value;
     - `.toBuffers()`: An array that includes two `Buffer`s.
+    - `.toBigNumber()`: A `BigNumber` value which may refer [here](https://github.com/alexbardas/bignumber.js);
 
 ## Contribution
 
