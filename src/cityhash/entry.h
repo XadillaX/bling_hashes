@@ -24,7 +24,7 @@
 
 void __CityHash64FreeCallback(char* data, void* hint)
 {
-    unsigned long long* hash = (unsigned long long*)data;
+    uint64* hash = (uint64*)data;
     delete hash;
 }
 
@@ -62,14 +62,46 @@ NAN_METHOD(_CityHash64)
     std::string source_string = *v8_source_string;
     unsigned int len = source_string.size();
 
-    unsigned long long* hash = new unsigned long long(CityHash64(source_string.c_str(), len));
+    uint64* hash = new uint64(CityHash64(source_string.c_str(), len));
     // printf("    %llu\n", *hash);
     info.GetReturnValue().Set(
             Nan::NewBuffer(
                 (char*)hash,
-                sizeof(unsigned long long),
+                sizeof(uint64),
                 __CityHash64FreeCallback,
                 NULL).ToLocalChecked());
+}
+
+typedef uint64 (*Extract128Func)(const uint128&);
+const Extract128Func Extract128[] = { Uint128Low64, Uint128High64 };
+
+NAN_METHOD(_CityHash128)
+{
+    // argument length...
+    if(info.Length() < 1)
+    {
+        return Nan::ThrowError("invalid argument count");
+    }
+
+    String::Utf8Value v8_source_string(info[0]->ToString());
+    std::string source_string = *v8_source_string;
+    unsigned int len = source_string.size();
+
+    uint128 hash = CityHash128(source_string.c_str(), len);
+    v8::Local<v8::Array> array = Nan::New<v8::Array>();
+    for(int i = 0; i < 2; i++)
+    {
+        uint64* _64 = new uint64(Extract128[i](hash));
+
+        v8::Local<v8::Value> buf = Nan::NewBuffer(
+            (char*)_64,
+            sizeof(uint64),
+            __CityHash64FreeCallback,
+            NULL).ToLocalChecked();
+        Nan::Set(array, i, buf);
+    }
+
+    info.GetReturnValue().Set(array);
 }
 
 #endif

@@ -31,7 +31,8 @@ There are 8 algorithms so far.
   * [ELFHash](http://www.partow.net/programming/hashfunctions/#ELFHashFunction)
   * [CityHash](https://github.com/google/cityhash)
     - [CityHash32](https://github.com/google/cityhash/blob/master/src/city.cc#L189): returns a 32-bit hash.
-    - [CityHash64](https://https://github.com/google/cityhash/blob/master/src/city.cc#L366): and similar return a 64-bit hash.
+    - [CityHash64](https://github.com/google/cityhash/blob/master/src/city.cc#L366): and similar return a 64-bit hash.
+    - [CityHash128](https://github.com/google/cityhash/blob/master/src/city.cc#L508): and similar return a 128-bit hash.
 
 The benchmark, performance and implementation can be referenced [here (各种字符串Hash函数比较)](https://www.byvoid.com/blog/string-hash-compare/).
 
@@ -48,8 +49,19 @@ And then you can pass any string to functions (the same name as algorithms, in l
 Eg.
 
 ```javascript
-var hash = bling.bkdr("Hello world!"); ///< 501511565
+var hash1 = bling.bkdr("Hello world!"); ///< 501511565
+var hash2 = bling.city32("玉扣"); ///< 887335438
 ```
+
+## Return Values
+
++ From `BKDR` to `ELF`, the functions return a `Number` value;
++ `city32` returns a `Number` value too;
++ `city64` returns a `Long` value which may refer [here](https://github.com/dcodeIO/long.js);
++ `city128` returns a `City128Value` value which has properties below:
+    - `.toString()`: The string value of the 128-bit number;
+    - `.toLongArray()`: An array that includes two 64-bit `Long` value;
+    - `.toBuffers()`: An array that includes two `Buffer`s.
 
 ## Contribution
 

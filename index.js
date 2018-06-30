@@ -7,6 +7,8 @@
 var bling = require("./build/Release/bling");
 var Long = require("long");
 
+const City128Value = require('./lib/city128');
+
 /**
  * bkdr
  * @param {String} str the string will be hashed
@@ -97,4 +99,14 @@ exports.city64 = function(str) {
     var _int64 = bling.cityHash64(str);
     _int64 = new Long(_int64.readInt32LE(0), _int64.readInt32LE(4), true);
     return _int64;
+};
+
+/**
+ * city128
+ * @param {String} str the string will be hashed
+ * @return {City128Value} the hash value
+ */
+exports.city128 = function(str) {
+    var _int128 = bling.cityHash128(str);
+    return new City128Value(_int128);
 };
