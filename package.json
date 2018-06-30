@@ -25,8 +25,9 @@
   },
   "homepage": "https://github.com/XadillaX/bling_hashes#readme",
   "dependencies": {
+    "big-number": "^1.0.0",
     "long": "^3.0.1",
-    "nan": "^2.1.0"
+    "nan": "^2.7.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",

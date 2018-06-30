@@ -1,10 +1,8 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.11"
-  - "0.12"
-  - "4.0.0"
-  - "4.1"
+  - "4"
+  - "6"
+  - "8"
 install:
   - export CXX="g++-4.8" CXX="gcc-4.8"
   - $CXX --version

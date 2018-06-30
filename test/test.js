@@ -19,7 +19,8 @@ describe("hash algorithm tests", function() {
         "PJW",
         "ELF",
         "CITY32",
-        "CITY64"
+        "CITY64",
+        "CITY128"
     ];
 
     before(function() {
@@ -45,13 +46,13 @@ describe("hash algorithm tests", function() {
                 res.push(bling[name](words[i]));
             }
 
-            // if(name === "city64") {
-            //     var fs = require("fs");
-            //     fs.writeFileSync(__dirname + "/resources/" + name + ".txt", res.join("\n"), {
-            //         encoding: "utf8"
-            //     });
-            //     return;
-            // }
+            if(name === "city128") {
+                var fs = require("fs");
+                fs.writeFileSync(__dirname + "/resources/" + name + ".txt", res.join("\n"), {
+                    encoding: "utf8"
+                });
+                return;
+            }
 
             var fs = require("fs");
             var std = fs.readFileSync(__dirname + "/resources/" + name + ".txt", {
