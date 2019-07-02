@@ -10,15 +10,15 @@
  *       Revision:  none
  *       Compiler:  g++
  *
- *         Author:  XadillaX <zhukaidi@souche.com>
- *   Organization:  Souche.com
+ *         Author:  XadillaX <i@2333.moe>
  *
  * =====================================================================================
  */
 #ifndef __BYVOID_ENTRY_H__
 #define __BYVOID_ENTRY_H__
-#include <nan.h>
+
 #include "algorithms.h"
+#include "../common.h"
 
 using v8::String;
 
@@ -35,14 +35,16 @@ void ToUpperCase(std::string& str)
 
 NAN_METHOD(CalcHash)
 {
+    CURRENT_CONTEXT(ctx);
+
     // argument length...
     if(info.Length() < 2)
     {
         return Nan::ThrowError("invalid argument count");
     }
 
-    String::Utf8Value v8_algorithm_type(info[0]->ToString());
-    String::Utf8Value v8_string(info[1]->ToString());
+    Nan::Utf8String v8_algorithm_type(info[0]->ToString(ctx).ToLocalChecked());
+    Nan::Utf8String v8_string(info[1]->ToString(ctx).ToLocalChecked());
 
     // type to uppercase
     std::string algorithm_type = *v8_algorithm_type;
