@@ -1,4 +1,10 @@
 
+2.0.0 / 2019-07-02
+==================
+
+**others**
+  * [[`7d3d1cd`](http://github.com/XadillaX/bling_hashes/commit/7d3d1cd1ae4f2bd284badf0747ea9b25cacc1fe7)] - refactor: support Node.js 12 (#3) (#4) (Khaidi Chu <<Z134325059@cst.zju.edu.cn>>)
+
 1.2.0 / 2018-06-30
 ==================
 
