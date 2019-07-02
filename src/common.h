@@ -1,3 +1,19 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  common.h
+ *
+ *    Description:  Common header
+ *
+ *        Version:  1.0
+ *        Created:  2019/07/02 14时41分32秒
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  XadillaX <i@2333.moe>
+ *
+ * =====================================================================================
+ */
 #ifndef __COMMON_H__
 #define __COMMON_H__
 

@@ -10,8 +10,7 @@
  *       Revision:  none
  *       Compiler:  g++
  *
- *         Author:  XadillaX <zhukaidi@souche.com>
- *   Organization:  Souche.com
+ *         Author:  XadillaX <i@2333.moe>
  *
  * =====================================================================================
  */

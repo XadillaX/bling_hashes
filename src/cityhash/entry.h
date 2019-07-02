@@ -10,8 +10,7 @@
  *       Revision:  none
  *       Compiler:  g++
  *
- *         Author:  XadillaX (ZKD), zhukaidi@souche.com
- *   Organization:  Design & Development Center, Souche Car Service Co., Ltd, HANGZHOU
+ *         Author:  XadillaX (i@2333.moe)
  *
  * =====================================================================================
  */
