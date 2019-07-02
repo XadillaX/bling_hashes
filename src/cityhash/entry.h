@@ -18,9 +18,9 @@
 #ifndef __CITYHASH_ENTRY_H__
 #define __CITYHASH_ENTRY_H__
 
-#include <nan.h>
 #include <string>
 #include "cityhash.h"
+#include "../common.h"
 
 void __CityHash64FreeCallback(char* data, void* hint)
 {
@@ -30,13 +30,15 @@ void __CityHash64FreeCallback(char* data, void* hint)
 
 NAN_METHOD(_CityHash32)
 {
+    CURRENT_CONTEXT(ctx);
+
     // argument length...
     if(info.Length() < 1)
     {
         return Nan::ThrowError("invalid argument count");
     }
 
-    String::Utf8Value v8_source_string(info[0]->ToString());
+    Nan::Utf8String v8_source_string(info[0]->ToString(ctx).ToLocalChecked());
     std::string source_string = *v8_source_string;
     unsigned int len = source_string.size();
 
@@ -52,13 +54,15 @@ NAN_METHOD(_CityHash32)
 
 NAN_METHOD(_CityHash64)
 {
+    CURRENT_CONTEXT(ctx);
+
     // argument length...
     if(info.Length() < 1)
     {
         return Nan::ThrowError("invalid argument count");
     }
 
-    String::Utf8Value v8_source_string(info[0]->ToString());
+    Nan::Utf8String v8_source_string(info[0]->ToString(ctx).ToLocalChecked());
     std::string source_string = *v8_source_string;
     unsigned int len = source_string.size();
 
@@ -77,13 +81,15 @@ const Extract128Func Extract128[] = { Uint128Low64, Uint128High64 };
 
 NAN_METHOD(_CityHash128)
 {
+    CURRENT_CONTEXT(ctx);
+
     // argument length...
     if(info.Length() < 1)
     {
         return Nan::ThrowError("invalid argument count");
     }
 
-    String::Utf8Value v8_source_string(info[0]->ToString());
+    Nan::Utf8String v8_source_string(info[0]->ToString(ctx).ToLocalChecked());
     std::string source_string = *v8_source_string;
     unsigned int len = source_string.size();
 
